@@ -10,14 +10,15 @@ fullHostName=$(hostname -f)
 echo "fullHostName=$fullHostName"
 
 cd /root
-wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-without-hadoop.tgz
-tar -xzf spark-2.0.0-bin-without-hadoop.tgz
-cd spark-2.0.0-bin-without-hadoop
+wget https://www.apache.org/dist/spark/spark-2.0.0/spark-2.0.0-bin-hadoop2.7.tgz
+tar -xzf spark-2.0.0-bin-hadoop2.7.tgz
+cd spark-2.0.0-bin-hadoop2.7
 rm -r conf
-ln -s /etc/spark/2.4.2.0-258/0 conf
+rm jars/hadoop-*
+ln -s /etc/spark/2.4.2.4-5/0 conf
 
 cd ..
-rm -r /usr/hdp/2.4.2.0-258/spark
-mv spark-2.0.0-bin-without-hadoop /usr/hdp/2.4.2.0-258/spark 
+rm -r /usr/hdp/2.4.2.4-5/spark
+mv spark-2.0.0-bin-hadoop2.7 /usr/hdp/2.4.2.4-5/spark 
 
 echo "Spark 2.0 installation completed"

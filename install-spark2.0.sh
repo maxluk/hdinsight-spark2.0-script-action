@@ -14,10 +14,10 @@ wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-without-hadoop.tgz
 tar -xzf spark-2.0.0-bin-without-hadoop.tgz
 cd spark-2.0.0-bin-without-hadoop
 rm -r conf
-ln -s /etc/spark/2.4.2.0-258/0 conf
+ln -s /etc/spark/2.4.2.4-5/0 conf
 
 cd ..
-rm -r /usr/hdp/2.4.2.0-258/spark
-mv spark-2.0.0-bin-without-hadoop /usr/hdp/2.4.2.0-258/spark 
+rm -r /usr/hdp/2.4.2.4-5/spark
+mv spark-2.0.0-bin-without-hadoop /usr/hdp/2.4.2.4-5/spark 
 
 echo "Spark 2.0 installation completed"

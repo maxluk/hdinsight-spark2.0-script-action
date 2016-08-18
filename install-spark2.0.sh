@@ -10,9 +10,10 @@ fullHostName=$(hostname -f)
 echo "fullHostName=$fullHostName"
 
 cd /root
-wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-without-hadoop.tgz
-tar -xzf spark-2.0.0-bin-without-hadoop.tgz
-cd spark-2.0.0-bin-without-hadoop
+wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.tgz
+tar -xzf spark-2.0.0-bin-hadoop2.7.tgz
+cd spark-2.0.0-bin-hadoop2.7
+rm jar/Hadoop*
 rm -r conf
 ln -s /etc/spark/2.4.2.4-5/0 conf
 

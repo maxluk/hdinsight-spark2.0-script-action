@@ -19,6 +19,6 @@ ln -s /etc/spark/2.4.2.4-5/0 conf
 
 cd ..
 rm -r /usr/hdp/2.4.2.4-5/spark
-mv spark-2.0.0-bin-without-hadoop /usr/hdp/2.4.2.4-5/spark 
+mv spark-2.0.0-bin-hadoop2.7 /usr/hdp/2.4.2.4-5/spark 
 
 echo "Spark 2.0 installation completed"

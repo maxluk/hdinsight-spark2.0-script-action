@@ -5,7 +5,7 @@ This script action is limited at the moment only to basic Spark services in comm
 ## Installation instructions
 
 1. Create HDInsight Spark cluster version 3.4 (Spark 1.6.1)
-2. Run script action: `install-spark2.0.sh` on this cluster. Go to Azure portal, open cluster blade, open Script Actions tile, click Submit new and follow instructions. The script action is provided in this repository.
+2. Run script action: `install-spark2.0.sh` on this cluster. Go to Azure portal > open cluster blade > open Script Actions tile > click Submit new and follow instructions. The script action is provided in this repository.
 3. Update class path in the cluster configuration. Open Ambari portal of the cluster, go to Spark > Configs > Advanced spark-env and update SPARK_DIST_CLASSPATH variable to the following value:
 
 	```bash
@@ -13,5 +13,11 @@ This script action is limited at the moment only to basic Spark services in comm
 	```
 
 	Restart affected Ambari services.
-	
-4. In ssh session launch `spark-shell`, `spark-submit`, etc.
+
+4. Update `spark.yarn.jars` property. Open Ambari portal of the cluster, go to Spark > Configs > Custom spark-defaults.
+	4.1. Remove `spark.yarn.jar` property
+	4.2. Add `spark.yarn.jars` property and set its value to `local:///usr/hdp/current/spark-client/jars/*`.
+
+5. Remove spark shuffle service from Yarn settings. Open Ambari portal of the cluster, go to Yarn > Advanced > Node manager and remove `spark_shuffle` by setting `yarn.nodemanager.aux-services` property to value `mapreduce_shuffle`.
+
+6. In ssh session launch `spark-shell`, `spark-submit`, etc.

@@ -14,7 +14,6 @@ wget http://d3kbcqa49mib13.cloudfront.net/spark-2.0.0-bin-hadoop2.7.tgz
 tar -xzf spark-2.0.0-bin-hadoop2.7.tgz
 cd spark-2.0.0-bin-hadoop2.7
 rm jars/hadoop*
-#rm jars/netty-3.8.0.* 
 rm -r conf
 ln -s /etc/spark/2.4.2.4-5/0 conf
 

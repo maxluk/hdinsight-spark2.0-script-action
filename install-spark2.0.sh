@@ -14,4 +14,8 @@ cd ..
 rm -r "$SPARK_DIR"
 mv "$newspark" "$SPARK_DIR"
 
+cd "$(dirname "$SPARK_DIR")/hadoop/lib"
+ln -sf "../../$(basename "$SPARK_DIR")/yarn/spark-2.0.0-yarn-shuffle.jar" \
+   "spark-yarn-shuffle.jar"
+
 echo "Spark 2.0 installation completed"

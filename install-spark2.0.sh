@@ -6,7 +6,7 @@ SPARK_DIR="$(readlink -f "/usr/hdp/current/spark-client")"
 SPARK_CONF_DIR="$(readlink -f "/usr/hdp/current/spark-client/conf")"
 
 cd "/tmp"
-curl "http://d3kbcqa49mib13.cloudfront.net/$newspark.tgz" | tar xzf -
+curl "https://www.apache.org/dist/spark/spark-2.0.0/$newspark.tgz" | tar xzf -
 cd "$newspark"
 rm -r "jars/hadoop"* "conf"
 ln -s "$SPARK_CONF_DIR" "conf"

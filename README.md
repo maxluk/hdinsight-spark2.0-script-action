@@ -20,6 +20,4 @@ This script action is limited at the moment only to basic Spark services in comm
 	
 	4.2. Add `spark.yarn.jars` property and set its value to `local:///usr/hdp/current/spark-client/jars/*`.
 
-5. Remove spark shuffle service from Yarn settings. Open Ambari portal of the cluster, go to Yarn > Advanced > Node manager and remove `spark_shuffle` by setting `yarn.nodemanager.aux-services` property to value `mapreduce_shuffle`.
-
-6. In ssh session launch `spark-shell`, `spark-submit`, etc.
+5. In an ssh session launch `spark-shell`, `spark-submit`, etc.

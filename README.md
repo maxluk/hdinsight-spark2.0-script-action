@@ -1,6 +1,8 @@
 # hdinsight-spark2.0-script-action
 Script action to install Spark 2.0 on top of HDInsight Spark 1.6.x cluster (for development and experimental purposes).
-This script action is limited at the moment only to basic Spark services in command line. Some services like livy and thrift work, but Jupyter does not. 
+
+This script action is limited at the moment only to basic Spark services in command line. Services like livy and thrift work, but Jupyter does not. 
+
 
 ## Installation instructions
 

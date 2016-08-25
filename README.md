@@ -1,7 +1,13 @@
-# hdinsight-spark2.0-script-action
+## hdinsight-spark2.0-script-action
 Script action to install Spark 2.0 on top of HDInsight Spark 1.6.x cluster (for development and experimental purposes).
 
 This script action is limited at the moment only to basic Spark services in command line. Services like livy and thrift work, but Jupyter does not. 
+
+
+#This repo has been deprecated. 
+
+###Please check HDInsight's [script-actions](https://github.com/hdinsight/script-actions/tree/master/install-spark2) repo for future updates
+
 
 
 ## Installation instructions
